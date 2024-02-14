@@ -1,25 +1,39 @@
 @import "normalize.css";
 
 p {
-text-align: center;
-font-size: 32px;
-font-family: Georgia, serif;
+  text-align: center;
+  font-size: 32px;
+  font-family: 'Cavead', cursive;
 }
-img {
-display: block;
-margin: 0 auto;
-width: 100%;
-max-width: 150px;
-}
-#Button1 {
 
-background-color: #d08acb;
-}
-#Button2 {
-  position: relative;
-}
-#paulina{
+img {
   display: block;
   margin: 0 auto;
+  width: 100%;
+  max-width: 150px;
+}
+
+#Button1 {
+  background-color: #d08acb;
+  padding: 10px 20px; 
+  font-family: 'Cavead', cursive;
+}
+
+#Button2 {
+  position: relative;
+  background-color: #908083;
+  padding: 10px 20px; 
+  font-family: 'Cavead', cursive;
+}
+
+#Carla {
+  display: block;
+  margin: 20px auto;
   width: fit-content;
+}
+
+body{
+  background-image: url(https://img.freepik.com/vector-gratis/fondo-escritorio-flores-vector-lindo_53876-136877.jpg) ;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function () {
   const Button2 = document.getElementById('Button2');
   function handleUpdateButtonPosition() {
@@ -22,5 +21,3 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 })
-
-
