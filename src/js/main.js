@@ -7,8 +7,10 @@ document.addEventListener("DOMContentLoaded", function(){
     const pageHeight = window.innerHeight - Button2.offsetHeight;
     const randomLeft = Math.floor(Math.random() * pageWidth);
     const randomTop = Math.floor(Math.random() * pageHeight);
+    const nuevaPosX = Math.min(Math.max(randomLeft, 0), pageWidth);
+    const nuevaPosY = Math.min(Math.max(randomTop, 0), pageHeight);
     
-    Button2.style.transform = `translate(${randomLeft}px, ${randomTop}px)`;
+    Button2.style.transform = `translate(${nuevaPosX}px, ${nuevaPosY}px)`;
   };
   Button2.addEventListener('mouseover', Cebolla);
   
