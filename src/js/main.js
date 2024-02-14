@@ -1,29 +1,26 @@
 
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function () {
   const Button2 = document.getElementById('Button2');
-  function Cebolla (){
-    console.log(Button2, Button2.offsetHeight,Button2.offsetWidth);
-    const pageWidth = window.innerWidth - Button2.offsetWidth                                        ;
-    const pageHeight = window.innerHeight - Button2.offsetHeight;
-    const randomLeft = Math.floor(Math.random() * pageWidth);
-    const randomTop = Math.floor(Math.random() * pageHeight);
-    const nuevaPosX = Math.min(Math.max(randomLeft, 0), pageWidth);
-    const nuevaPosY = Math.min(Math.max(randomTop, 0), pageHeight);
-    
-    Button2.style.transform = `translate(${nuevaPosX}px, ${nuevaPosY}px)`;
+  function handleUpdateButtonPosition() {
+    Button2.style.transform = ""
+    const seed = Math.random()
+    const pageX = window.innerWidth - Button2.offsetWidth
+    const pageY = window.innerHeight - Button2.offsetHeight
+    const targetX = Math.min(pageX * seed, pageX)
+    const targetY = Math.min(pageY * seed, pageY)
+    const { x, y } = Button2.getBoundingClientRect()
+    const translateX = targetX - x
+    const translateY = targetY - y
+    Button2.style.transform = `translate(${translateX}px, ${translateY}px)`;
   };
-  Button2.addEventListener('mouseover', Cebolla);
-  
-  Button2.addEventListener('click', Cebolla);
-  
-  
-  document.getElementById('Button1').addEventListener('click', function() {
-  alert('HEHE THANKSSS! I LOVE YOU <3');
-  });
-  
-})
+  Button2.addEventListener('mouseover', handleUpdateButtonPosition);
+  Button2.addEventListener('click', handleUpdateButtonPosition);
 
-//Que quede en una soolo espacio y sin tapar imagen
-//const {c,...rest}={a:true, b:5, c:function(){}}
+
+  document.getElementById('Button1').addEventListener('click', function () {
+    alert('HEHE THANKSSS! I LOVE YOU <3');
+  });
+
+})
 
 
